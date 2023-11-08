@@ -18,10 +18,12 @@ export const authOptions: NextAuthOptions = {
     signIn: "/login",
   },
   providers: [
+    /*
     GoogleProvider({
       clientId: env.GOOGLE_CLIENT_ID,
       clientSecret: env.GOOGLE_CLIENT_SECRET,
     }),
+    */
     EmailProvider({
       sendVerificationRequest: async ({ identifier, url, provider }) => {
         const user = await prisma.user.findUnique({
