@@ -30,7 +30,7 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
     resolver: zodResolver(userAuthSchema),
   })
   const [isLoading, setIsLoading] = React.useState<boolean>(false)
-  const [isGoogleLoading, setIsGoogleLoading] = React.useState<boolean>(false)
+  //const [isGoogleLoading, setIsGoogleLoading] = React.useState<boolean>(false)
   const searchParams = useSearchParams()
 
   async function onSubmit(data: FormData) {
@@ -74,7 +74,7 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
               autoCapitalize="none"
               autoComplete="email"
               autoCorrect="off"
-              disabled={isLoading || isGoogleLoading}
+              disabled={isLoading}// || isGoogleLoading}
               {...register("email")}
             />
             {errors?.email && (
