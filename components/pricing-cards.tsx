@@ -8,7 +8,7 @@ import { Icons } from "@/components/shared/icons";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Switch } from '@/components/ui/switch';
 import { pricingData } from "@/config/subscriptions";
-import { useSigninModal } from "@/hooks/use-signin-modal";
+import { cn } from "@/lib/utils"
 import { UserSubscriptionPlan } from "@/types";
 import Balancer from "react-wrap-balancer";
 
@@ -20,9 +20,7 @@ interface PricingCardsProps {
 export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
   const isYearlyDefault = (!subscriptionPlan?.interval || subscriptionPlan.interval === "year") ? true : false;
   const [isYearly, setIsYearly] = useState<boolean>(!!isYearlyDefault);
-  const signInModal = useSigninModal();
-
-
+  
   const toggleBilling = () => {
     setIsYearly(!isYearly);
   };
@@ -113,7 +111,15 @@ export function PricingCards({ userId, subscriptionPlan }: PricingCardsProps) {
                   </>
                 )
               ) : (
-                <Button onClick={signInModal.onOpen}>Sign in</Button>
+                <Link
+                href="/login"
+                className={cn(
+                  buttonVariants({ variant: "ghost" }),
+                  "absolute right-4 top-4 md:right-8 md:top-8"
+                )}
+              >
+                Login
+              </Link>
               )}
 
             </div>

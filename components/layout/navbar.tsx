@@ -8,7 +8,6 @@ import { UserAccountNav } from "./user-account-nav";
 import { Button, buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { useSigninModal } from "@/hooks/use-signin-modal";
 
 
 interface NavBarProps {
@@ -21,7 +20,6 @@ interface NavBarProps {
 
 export function NavBar({ user, items, children, rightElements, scroll = false }: NavBarProps) {
   const scrolled = useScroll(50);
-  const signInModal = useSigninModal();
 
   return (
       <header
@@ -50,7 +48,15 @@ export function NavBar({ user, items, children, rightElements, scroll = false }:
             {user ? (
               <UserAccountNav user={user} />
             ) : (
-              <Button className="px-3" variant="default" size="sm" onClick={signInModal.onOpen}>Sign In</Button>
+              <Link
+                href="/login"
+                className={cn(
+                  buttonVariants({ variant: "ghost" }),
+                  "absolute right-4 top-4 md:right-8 md:top-8"
+                )}
+              >
+                Login
+              </Link>
             )}
           </div>
         </div>
