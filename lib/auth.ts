@@ -41,7 +41,7 @@ export const authOptions: NextAuthOptions = {
 
         try {
           const result = await resend.emails.send({
-            from: 'SaaS Starter App <onboarding@resend.dev>',
+            from: 'docu.run <onboarding@docu.run>',
             to: process.env.NODE_ENV === "development" ? 'delivered@resend.dev' : identifier,
             subject: authSubject,
             react: MagicLinkEmail({
@@ -57,7 +57,7 @@ export const authOptions: NextAuthOptions = {
             },
           });
 
-          // console.log(result)
+          console.log(result)
         } catch (error) {
           throw new Error("Failed to send verification email.")
         }
