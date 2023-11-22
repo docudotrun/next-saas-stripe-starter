@@ -7,9 +7,7 @@
     "url": "https://twitter.com/mickasmt"
   },
   "scripts": {
-    "fastapi-dev": "pip3 install -r requirements.txt && python3 -m uvicorn api.index:app --reload",
-    "next-dev": "next dev",
-    "dev": "concurrently \"npm run next-dev\" \"npm run fastapi-dev\"",
+    "dev": "next dev",
     "build": "contentlayer build && next build",
     "turbo": "next dev --turbo",
     "start": "next start",
