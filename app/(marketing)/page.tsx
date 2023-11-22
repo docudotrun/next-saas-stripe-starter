@@ -11,7 +11,7 @@ import { env } from "@/env.mjs"
 
 export default async function IndexPage(props) {
   const [image, setImage] = useState(null);
-  const [createObjectURL, setCreateObjectURL] = useState(null);
+  const [createObjectURL, setCreateObjectURL] = useState('');
 
   const uploadToClient = (event) => {
     if (event.target.files && event.target.files[0]) {
