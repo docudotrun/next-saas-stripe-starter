@@ -24,27 +24,17 @@ export default async function IndexPage(props) {
 
   const uploadToServer = async (event) => {
     const body = new FormData();
-    body.append("file", image);
-    const response = await fetch("/api/file", {
-      method: "POST",
-      body
-    });
+    if(image){
+      body.append("file", image);
+      const response = await fetch("/api/file", {
+        method: "POST",
+        body
+      });
+    }
+    else{
+      console.log("The image is null.")
+    }
   };
-  const { stargazers_count: stars } = await fetch(
-    "https://api.github.com/repos/mickasmt/next-saas-stripe-starter",
-    {
-      ...(env.GITHUB_OAUTH_TOKEN && {
-        headers: {
-          Authorization: `Bearer ${process.env.GITHUB_OAUTH_TOKEN}`,
-          "Content-Type": "application/json",
-        },
-      }),
-      // data will revalidate every hour
-      next: { revalidate: 3600 },
-    },
-  )
-    .then((res) => res.json())
-    .catch((e) => console.log(e));
 
 
   return (
