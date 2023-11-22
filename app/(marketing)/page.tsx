@@ -104,7 +104,6 @@ export default async function IndexPage(props) {
               <Icons.gitHub className="mr-2 h-4 w-4" />
               <p>
                 <span className="hidden sm:inline-block">Star on</span>{" "}GitHub{" "}
-                <span className="font-semibold">{nFormatter(stars)}</span>
               </p>
             </Link>
           </div>
