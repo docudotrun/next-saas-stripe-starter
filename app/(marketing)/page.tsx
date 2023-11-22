@@ -1,5 +1,5 @@
 import Link from "next/link"
-
+import { useState } from "react";
 import { buttonVariants } from "@/components/ui/button"
 import { siteConfig } from "@/config/site"
 import { cn, nFormatter } from "@/lib/utils"
@@ -7,7 +7,27 @@ import Balancer from "react-wrap-balancer"
 import { Icons } from "@/components/shared/icons"
 import { env } from "@/env.mjs"
 
-export default async function IndexPage() {
+export default async function IndexPage(props) {
+  const [image, setImage] = useState(null);
+  const [createObjectURL, setCreateObjectURL] = useState(null);
+
+  const uploadToClient = (event) => {
+    if (event.target.files && event.target.files[0]) {
+      const i = event.target.files[0];
+
+      setImage(i);
+      setCreateObjectURL(URL.createObjectURL(i));
+    }
+  };
+
+  const uploadToServer = async (event) => {
+    const body = new FormData();
+    body.append("file", image);
+    const response = await fetch("/api/file", {
+      method: "POST",
+      body
+    });
+  };
   const { stargazers_count: stars } = await fetch(
     "https://api.github.com/repos/mickasmt/next-saas-stripe-starter",
     {
@@ -58,7 +78,24 @@ export default async function IndexPage() {
               Build your next project using Next.js 14, Prisma, Planetscale, Auth.js, Resend, React Email, Shadcn/ui, Stripe.
             </Balancer>
           </p>
-
+          <p>
+            <Balancer>
+              <div>
+                <div>
+                  <img src={createObjectURL} />
+                  <h4>Select Image</h4>
+                  <input type="file" name="myImage" onChange={uploadToClient} />
+                  <button
+                    className="btn btn-primary"
+                    type="submit"
+                    onClick={uploadToServer}
+                  >
+                    Send to server
+                  </button>
+                </div>
+              </div>
+            </Balancer>
+          </p>
           <div
             className="flex animate-fade-up justify-center space-x-2 opacity-0 md:space-x-4"
             style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
