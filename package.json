@@ -8,12 +8,12 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && prisma db push --accept-data-loss && contentlayer build && next build",
+    "build": "contentlayer build && next build",
     "turbo": "next dev --turbo",
     "start": "next start",
     "lint": "next lint",
     "preview": "next build && next start",
-    "postinstall": "prisma generate",
+    "postinstall": "prisma generate && prisma db push --accept-data-loss",
     "email": "email dev --dir emails --port 3333"
   },
   "dependencies": {
