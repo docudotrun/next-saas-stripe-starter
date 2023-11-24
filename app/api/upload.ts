@@ -1,4 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse } from 'next';
+import initMiddleware from '../../lib/initMiddleware'
+import Cors from 'cors';
 import { promises as fs } from "fs";
 import path from "path";
 import formidable, { File } from 'formidable';
@@ -9,10 +11,17 @@ export const config = {
     }
 };
 
+const cors = initMiddleware(
+    Cors({
+        methods: ['POST']
+    })
+)
+
+
 type ProcessedFiles = Array<[string, File]>;
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-
+    await cors(req, res);
     let status = 200,
         resultBody = { status: 'ok', message: 'Files were uploaded successfully' };
 
