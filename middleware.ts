@@ -9,6 +9,7 @@ export default withAuth(
     const isAuth = !!token
     const isAuthPage =
       req.nextUrl.pathname.startsWith("/login") ||
+      req.nextUrl.pathname.startsWith("/api/upload") ||
       req.nextUrl.pathname.startsWith("/register")
 
     if (isAuthPage) {
