@@ -1,56 +1,17 @@
 "use client";
 
 import Link from "next/link"
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { buttonVariants } from "@/components/ui/button"
 import { siteConfig } from "@/config/site"
 import { cn, nFormatter } from "@/lib/utils"
 import Balancer from "react-wrap-balancer"
 import { Icons } from "@/components/shared/icons"
-import { env } from "@/env.mjs"
+import type { PutBlobResult } from '@vercel/blob';
 
 export default function IndexPage(props) {
-  const [isLoading, setIsLoading] = useState(false);
-    const inputFileRef = React.useRef<HTMLInputElement | null>(null);
-
-    const handleOnClick = async (e: React.MouseEvent<HTMLInputElement>) => {
-
-        /* Prevent form from submitting by default */
-        e.preventDefault();
-
-        /* If file is not selected, then show alert message */
-        if (!inputFileRef.current?.files?.length) {
-            alert('Please, select file you want to upload');
-            return;
-        }
-
-        setIsLoading(true);
-
-        /* Add files to FormData */
-        const formData = new FormData();
-        Object.values(inputFileRef.current.files).forEach(file => {
-            formData.append('file', file);
-        })
-
-        /* Send request to our api route */
-        const response = await fetch('/api/upload', {
-            method: 'POST',
-            body: formData
-        });
-
-        const body = await response.json() as { status: 'ok' | 'fail', message: string };
-
-        alert(body.message);
-
-        if (body.status === 'ok') {
-            inputFileRef.current.value = '';
-            // Do some stuff on successfully upload
-        } else {
-            // Do some stuff on error
-        }
-
-        setIsLoading(false);
-    };
+  const inputFileRef = useRef<HTMLInputElement>(null);
+  const [blob, setBlob] = useState<PutBlobResult | null>(null);
 
 
   return (
@@ -86,17 +47,41 @@ export default function IndexPage(props) {
               Build your next project using Next.js 14, Prisma, Planetscale, Auth.js, Resend, React Email, Shadcn/ui, Stripe.
             </Balancer>
           </p>
-          <form>
-            <Balancer>
+          <p>
+            <h1>Upload Your Avatar</h1>
+
+            <form
+              onSubmit={async (event) => {
+                event.preventDefault();
+
+                if (!inputFileRef.current?.files) {
+                  throw new Error("No file selected");
+                }
+
+                const file = inputFileRef.current.files[0];
+
+                const response = await fetch(
+                  `/api/upload?filename=${file.name}`,
+                  {
+                    method: 'POST',
+                    body: file,
+                  },
+                );
+
+                const newBlob = (await response.json()) as PutBlobResult;
+
+                setBlob(newBlob);
+              }}
+            >
+              <input name="file" ref={inputFileRef} type="file" required />
+              <button type="submit">Upload</button>
+            </form>
+            {blob && (
               <div>
-                  <input type="file" name="myfile" ref={inputFileRef} multiple />
+                Blob url: <a href={blob.url}>{blob.url}</a>
               </div>
-              <div>
-                  <input type="submit" value="Upload" disabled={isLoading} onClick={handleOnClick} />
-                  {isLoading && ` Wait, please...`}
-              </div>
-            </Balancer>
-          </form>
+            )}
+          </p>
           <div
             className="flex animate-fade-up justify-center space-x-2 opacity-0 md:space-x-4"
             style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
