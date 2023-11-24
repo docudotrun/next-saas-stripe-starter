@@ -42,7 +42,7 @@ export default function IndexPage() {
             style={{ animationDelay: "0.35s", animationFillMode: "forwards" }}
           >
             <Balancer>
-              Build your document workflow using OCR to digitalize, AI to understand, (Slack API, X API, etc to notify.
+              Build your document workflow using OCR to digitalize, AI to understand, Slack API, X API, etc to notify and retrieve or send data via folder, http(s), ftp, email.
             </Balancer>
           </p>
           <main className="relative flex min-h-screen flex-col items-center justify-center">
