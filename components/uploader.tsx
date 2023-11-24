@@ -108,7 +108,7 @@ export default function Uploader() {
         <div className="space-y-1 mb-4">
           <h2 className="text-xl font-semibold">Upload a file</h2>
           <p className="text-sm text-gray-500">
-            Accepted formats: .png, .jpg, .gif, .mp4
+            Accepted formats: .png, .jpg, .pdf
           </p>
         </div>
         <label
