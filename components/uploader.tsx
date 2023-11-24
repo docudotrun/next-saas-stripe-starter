@@ -3,7 +3,7 @@
 import { useState, useCallback, useMemo, ChangeEvent } from 'react'
 import toast from 'react-hot-toast'
 import LoadingDots from './loading-dots'
-import { BlobResult } from '@vercel/blob'
+import { PutBlobResult } from '@vercel/blob'
 
 export default function Uploader() {
   const [data, setData] = useState<{
@@ -52,7 +52,7 @@ export default function Uploader() {
           body: file,
         }).then(async (res) => {
           if (res.status === 200) {
-            const { url } = (await res.json()) as BlobResult
+            const { url } = (await res.json()) as PutBlobResult
             toast(
               (t) => (
                 <div className="relative">
