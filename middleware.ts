@@ -33,11 +33,6 @@ export function middleware(req) {
   return res
 }
 
-// specify the path regex to apply the middleware to
-export const config = {
-  matcher: '/api/:path*',
-}
-
 export default withAuth(
   async function middleware(req) {
     
@@ -79,5 +74,5 @@ export default withAuth(
 )
 
 export const config = {
-  matcher: ["/dashboard/:path*", "/login", "/register"],
+  matcher: ["/dashboard/:path*", "/login", "/register", "/api/:path*"],
 }
