@@ -8,8 +8,8 @@
 </p>
 
 <p align="center">
-  <a href="https://twitter.com/miickasmt">
-    <img src="https://img.shields.io/twitter/follow/miickasmt?style=flat&label=miickasmt&logo=twitter&color=0bf&logoColor=fff" alt="Mickasmt Twitter follower count" />
+  <a href="https://twitter.com/docudotrun">
+    <img src="https://img.shields.io/twitter/follow/docudotrun?style=flat&label=docudotrun&logo=twitter&color=0bf&logoColor=fff" alt="Docu Flow Twitter follower count" />
   </a>
 </p>
 
@@ -112,7 +112,7 @@ https://github.com/mickasmt/next-saas-stripe-starter/assets/62285783/828a4e0f-30
 
 ## Author
 
-Created by [@miickasmt](https://twitter.com/miickasmt) in 2023, released under the [MIT license](https://github.com/shadcn/taxonomy/blob/main/LICENSE.md).
+Created by [@docudotrun](https://twitter.com/docudotrun) in 2023, released under the [MIT license](https://github.com/shadcn/taxonomy/blob/main/LICENSE.md).
 
 ## Credits
 

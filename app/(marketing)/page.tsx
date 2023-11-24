@@ -17,7 +17,7 @@ export default function IndexPage() {
       <section className="space-y-6 pb-12 pt-16 lg:py-28">
         <div className="container flex max-w-[64rem] flex-col items-center gap-5 text-center">
           <Link
-            href="https://twitter.com/miickasmt/status/1719892161095745801"
+            href="https://twitter.com/docudotrun"
             className={cn(buttonVariants({ variant: "outline", size: "sm" }), "animate-fade-up opacity-0")}
             style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
             target="_blank"
@@ -42,7 +42,7 @@ export default function IndexPage() {
             style={{ animationDelay: "0.35s", animationFillMode: "forwards" }}
           >
             <Balancer>
-              Build your document workflow using OCR to digitalize, AI to undersand, (Slack API, X API, etc to notify.
+              Build your document workflow using OCR to digitalize, AI to understand, (Slack API, X API, etc to notify.
             </Balancer>
           </p>
           <main className="relative flex min-h-screen flex-col items-center justify-center">

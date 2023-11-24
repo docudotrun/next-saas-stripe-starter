@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "author": {
-    "name": "mickasmt",
-    "url": "https://twitter.com/mickasmt"
+    "name": "docudotrun",
+    "url": "https://twitter.com/docudotrun"
   },
   "scripts": {
     "dev": "next dev",
