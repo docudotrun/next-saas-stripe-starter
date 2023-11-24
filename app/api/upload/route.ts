@@ -23,6 +23,3 @@ export async function POST(request: Request): Promise<NextResponse> {
     return response.send(response);
   }
 }
-
-// The next lines are required for Pages API Routes only
-export const bodyParser = false;
