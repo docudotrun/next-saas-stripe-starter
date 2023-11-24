@@ -9,7 +9,7 @@ import Balancer from "react-wrap-balancer"
 import { Icons } from "@/components/shared/icons"
 import { env } from "@/env.mjs"
 
-export default async function IndexPage(props) {
+export default function IndexPage(props) {
   const [isLoading, setIsLoading] = useState(false);
     const inputFileRef = React.useRef<HTMLInputElement | null>(null);
 
@@ -86,19 +86,17 @@ export default async function IndexPage(props) {
               Build your next project using Next.js 14, Prisma, Planetscale, Auth.js, Resend, React Email, Shadcn/ui, Stripe.
             </Balancer>
           </p>
-          <p>
+          <form>
             <Balancer>
-              <form>
-                <div>
-                    <input type="file" name="myfile" ref={inputFileRef} multiple />
-                </div>
-                <div>
-                    <input type="submit" value="Upload" disabled={isLoading} onClick={handleOnClick} />
-                    {isLoading && ` Wait, please...`}
-                </div>
-              </form>
+              <div>
+                  <input type="file" name="myfile" ref={inputFileRef} multiple />
+              </div>
+              <div>
+                  <input type="submit" value="Upload" disabled={isLoading} onClick={handleOnClick} />
+                  {isLoading && ` Wait, please...`}
+              </div>
             </Balancer>
-          </p>
+          </form>
           <div
             className="flex animate-fade-up justify-center space-x-2 opacity-0 md:space-x-4"
             style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
