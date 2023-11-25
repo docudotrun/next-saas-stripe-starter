@@ -41,7 +41,7 @@ export function NavBar({ user, items, children, rightElements, scroll = false }:
                   buttonVariants({ variant: "outline", size: "sm" })
                 )}
               >
-                Login Page
+                Login
               </Link>
             ) : <UserAccountNav user={user} />}
           </div>

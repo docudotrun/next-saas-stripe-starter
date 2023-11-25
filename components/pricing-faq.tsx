@@ -14,23 +14,28 @@ const pricingFaqData = [
   },
   {
     id: "item-2",
-    question: "How much does the Basic Monthly plan cost?",
-    answer: "The Basic Monthly plan is priced at $15 per month. It provides access to our core features and is billed on a monthly basis.",
+    question: "How much does the Pro Monthly plan cost?",
+    answer: "The Pro Monthly plan is priced at $40 per month. It provides access to our core features and is billed on a monthly basis.",
   },
   {
     id: "item-3",
-    question: "What is the price of the Pro Monthly plan?",
-    answer: "The Pro Monthly plan is available for $25 per month. It offers advanced features and is billed on a monthly basis for added flexibility.",
+    question: "What is the price of the Business Monthly plan?",
+    answer: "The Business Monthly plan is available for $1000 per month. It offers advanced features and is billed on a monthly basis for added flexibility.",
   },
   {
     id: "item-4",
     question: "Do you offer any annual subscription plans?",
-    answer: "Yes, we offer annual subscription plans for even more savings. The Basic Annual plan is $144 per year, and the Pro Annual plan is $300 per year.",
+    answer: "Yes, we offer annual subscription plans for even more savings. The Pro Annual plan is $384 per year, and the Business Annual plan is $9600 per year.",
   },
   {
     id: "item-5",
     question: "Is there a trial period for the paid plans?",
     answer: "We offer a 14-day free trial for both the Pro Monthly and Pro Annual plans. It's a great way to experience all the features before committing to a paid subscription.",
+  },
+  {
+    id: "item-6",
+    question: "How much cost for training an extra model?",
+    answer: "$800 for up to 200 pages and 20 fields. Additional fields or pages will increase the price.",
   },
 ];
 

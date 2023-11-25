@@ -6,15 +6,13 @@ export const pricingData: SubscriptionPlan[] = [
     title: 'Starter',
     description: 'For Beginners',
     benefits: [
-      'Up to 100 monthly posts',
+      'Up to 10 monthly pages',
       'Basic analytics and reporting',
-      'Access to standard templates',
+      'Access to standard entities',
     ],
     limitations: [
-      'No priority access to new features.',
+      'Web only.',
       'Limited customer support',
-      'No custom branding',
-      'Limited access to business resources.',
     ],
     prices: {
       monthly: 0,
@@ -29,19 +27,19 @@ export const pricingData: SubscriptionPlan[] = [
     title: 'Pro',
     description: 'Unlock Advanced Features',
     benefits: [
-      'Up to 500 monthly posts',
+      'Up to 1000 monthly pages',
+      'Locally scanning',
+      'Build your own entities',
+      'Access to advanced entities',
       'Advanced analytics and reporting',
-      'Access to business templates',
       'Priority customer support',
-      'Exclusive webinars and training.',
     ],
     limitations: [
-      'No custom branding',
-      'Limited access to business resources.',
+      'Locally scanning without page counting with a trained model',
     ],
     prices: {
-      monthly: 15,
-      yearly: 144,
+      monthly: 40,
+      yearly: 384,
     },
     stripeIds: {
       monthly: env.NEXT_PUBLIC_STRIPE_PRO_MONTHLY_PLAN_ID,
@@ -52,16 +50,16 @@ export const pricingData: SubscriptionPlan[] = [
     title: 'Business',
     description: 'For Power Users',
     benefits: [
-      'Unlimited posts',
+      'Up to 30000 monthly pages',
+      'Unlimited pages counting with locally scanning with a standard trained model, $800+ per extra trained model',
       'Real-time analytics and reporting',
-      'Access to all templates, including custom branding',
       '24/7 business customer support',
       'Personalized onboarding and account management.',
     ],
     limitations: [],
     prices: {
-      monthly: 30,
-      yearly: 300,
+      monthly: 1000,
+      yearly: 9600,
     },
     stripeIds: {
       monthly: env.NEXT_PUBLIC_STRIPE_BUSINESS_MONTHLY_PLAN_ID,
