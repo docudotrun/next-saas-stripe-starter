@@ -19,15 +19,15 @@ export const docsConfig: DocsConfig = {
           title: "Introduction",
           href: "/docs",
         },
+        {
+          title: "Getting Started",
+          href: "/docs/getting-started",
+        },
       ],
     },
     {
-      title: "Documentation",
+      title: "Essentials",
       items: [
-        {
-          title: "Introduction",
-          href: "/docs/documentation",
-        },
         {
           title: "Contentlayer",
           href: "/docs/in-progress",

@@ -20,15 +20,15 @@ export default async function DashboardPage() {
 
   return (
     <DashboardShell>
-      <DashboardHeader heading="Scanning" text="Create and manage entity.">
+      <DashboardHeader heading="Documents" text="Create and manage document.">
         <Button>Refresh</Button>
       </DashboardHeader>
       <div>
         <EmptyPlaceholder>
           <EmptyPlaceholder.Icon name="post" />
-          <EmptyPlaceholder.Title>No entity created</EmptyPlaceholder.Title>
+          <EmptyPlaceholder.Title>No document created</EmptyPlaceholder.Title>
           <EmptyPlaceholder.Description>
-            You don&apos;t have any entity yet. Start scanning document.
+            You don&apos;t have any document yet. Start scanning document.
           </EmptyPlaceholder.Description>
           <Button variant="outline">Scan</Button>
         </EmptyPlaceholder>

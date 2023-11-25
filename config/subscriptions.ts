@@ -8,7 +8,7 @@ export const pricingData: SubscriptionPlan[] = [
     benefits: [
       'Up to 10 monthly pages',
       'Basic analytics and reporting',
-      'Access to standard entities',
+      'Access to standard document types',
     ],
     limitations: [
       'Web only.',
@@ -29,8 +29,8 @@ export const pricingData: SubscriptionPlan[] = [
     benefits: [
       'Up to 1000 monthly pages',
       'Locally scanning',
-      'Build your own entities',
-      'Access to advanced entities',
+      'Build your own document types',
+      'Access to advanced document types',
       'Advanced analytics and reporting',
       'Priority customer support',
     ],

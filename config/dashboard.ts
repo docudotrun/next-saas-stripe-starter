@@ -14,8 +14,18 @@ export const dashboardConfig: DashboardConfig = {
   ],
   sidebarNav: [
     {
-      title: "Panel",
+      title: "Documents",
       href: "/dashboard",
+      icon: "post",
+    },
+    {
+      title: "Document types",
+      href: "/dashboard/types",
+      icon: "post",
+    },
+    {
+      title: "Workflows",
+      href: "/dashboard/workflows",
       icon: "post",
     },
     {

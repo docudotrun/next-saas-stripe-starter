@@ -1,53 +1,59 @@
 ---
-title: Documentation
-description: Welcome to the Taxonomy documentation.
+title: Introduction
+description: Build your documentation site using Contentlayer and MDX.
 ---
 
-This is the documentation for the Taxonomy site.
-
-This is an example of a doc site built using [ContentLayer](/docs/documentation/contentlayer) and MDX.
-
-<Callout>
-
-This site is a work in progress. If you see dummy text on a page, it means I'm still working on it. You can follow updates on Twitter [@shadcn](https://twitter.com/shadcn).
-
-</Callout>
+Docu Flow includes a documentation site built using [Contentlayer](https://contentlayer.dev) and [MDX](http://mdxjs.com).
 
 ## Features
 
-Select a feature below to learn more about it.
+It comes with the following features out of the box:
 
-<div className="grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-4 mt-6">
+1. Write content using MDX.
+2. Transform and validate content using Contentlayer.
+3. MDX components such as `<Callout />` and `<Card />`.
+4. Support for table of contents.
+5. Custom navigation with prev and next pager.
+6. Beautiful code blocks using `rehype-pretty-code`.
+7. Syntax highlighting using `shiki`.
+8. Built-in search (_in progress_).
+9. Dark mode (_in progress_).
 
-<Card href="/docs/documentation">
+## How is it built
 
-### Documentation
+Click on a section below to learn how the documentation site built.
 
-This documentation site built using Contentlayer.
+<div className="grid gap-4 lg:grid-cols-2 mt-6">
 
-</Card>
+<Card href="/docs/introduction">
 
-<Card href="/docs/marketing" disabled>
+### Contentlayer
 
-### Marketing
-
-The marketing site with landing pages.
-
-</Card>
-
-<Card href="/docs/app" disabled>
-
-### App
-
-The dashboard with auth and subscriptions.
+Learn how to use MDX with Contentlayer.
 
 </Card>
 
-<Card href="/docs/blog" disabled>
+<Card href="/docs/documentation/components">
 
-### Blog
+### Components
 
-The blog built using Contentlayer and MDX.
+Using React components in Mardown.
+
+</Card>
+
+<Card href="/docs/documentation/components">
+
+### Code Blocks
+
+Beautiful code blocks with syntax highlighting.
+
+</Card>
+
+<Card href="/docs/documentation/components">
+
+### Style Guide
+
+View a sample page with all the styles.
 
 </Card>
 
