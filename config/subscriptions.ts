@@ -7,6 +7,7 @@ export const pricingData: SubscriptionPlan[] = [
     description: 'For Beginners',
     benefits: [
       'Up to 10 monthly pages',
+      '$5 for extra 100 pages',
       'Basic analytics and reporting',
       'Access to standard document types',
     ],
@@ -28,6 +29,7 @@ export const pricingData: SubscriptionPlan[] = [
     description: 'Unlock Advanced Features',
     benefits: [
       'Up to 1000 monthly pages',
+      '$40 for extra 1000 pages',
       'Locally scanning',
       'Build your own document types',
       'Access to advanced document types',
@@ -51,6 +53,7 @@ export const pricingData: SubscriptionPlan[] = [
     description: 'For Power Users',
     benefits: [
       'Up to 30000 monthly pages',
+      '$300 for extra 10000 pages',
       'Unlimited pages counting with locally scanning with a standard trained model, $800+ per extra trained model',
       'Real-time analytics and reporting',
       '24/7 business customer support',
