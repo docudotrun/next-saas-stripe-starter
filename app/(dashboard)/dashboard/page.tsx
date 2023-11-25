@@ -20,7 +20,7 @@ export default async function DashboardPage() {
 
   return (
     <DashboardShell>
-      <DashboardHeader heading="Documents" text="Create and manage document.">
+      <DashboardHeader heading="Documents" text="Create and manage documents.">
         <Button>Refresh</Button>
       </DashboardHeader>
       <div>
@@ -28,9 +28,9 @@ export default async function DashboardPage() {
           <EmptyPlaceholder.Icon name="post" />
           <EmptyPlaceholder.Title>No document created</EmptyPlaceholder.Title>
           <EmptyPlaceholder.Description>
-            You don&apos;t have any document yet. Start scanning document.
+            You don&apos;t have any document yet. Start scanning documents.
           </EmptyPlaceholder.Description>
-          <Button variant="outline">Scan</Button>
+          <Button variant="outline">Scan documents...</Button>
         </EmptyPlaceholder>
       </div>
     </DashboardShell>

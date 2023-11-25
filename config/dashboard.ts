@@ -16,17 +16,17 @@ export const dashboardConfig: DashboardConfig = {
     {
       title: "Documents",
       href: "/dashboard",
-      icon: "post",
+      icon: "page",
     },
     {
       title: "Document types",
       href: "/dashboard/types",
-      icon: "post",
+      icon: "text",
     },
     {
       title: "Workflows",
       href: "/dashboard/workflows",
-      icon: "post",
+      icon: "workflow",
     },
     {
       title: "Billing",

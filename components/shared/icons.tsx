@@ -11,6 +11,8 @@ import {
   Image,
   Laptop,
   Loader2,
+  Workflow,
+  Text,
   LucideProps,
   Moon,
   MoreVertical,
@@ -35,6 +37,7 @@ export const Icons = {
   chevronRight: ChevronRight,
   check: Check,
   close: X,
+  workflow: Workflow,
   ellipsis: MoreVertical,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
@@ -75,6 +78,7 @@ export const Icons = {
   media: Image,
   moon: Moon,
   page: File,
+  text: Text,
   post: FileText,
   search: Search,
   settings: Settings,
