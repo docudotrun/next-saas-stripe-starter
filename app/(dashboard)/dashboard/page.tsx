@@ -20,17 +20,17 @@ export default async function DashboardPage() {
 
   return (
     <DashboardShell>
-      <DashboardHeader heading="Panel" text="Create and manage content.">
-        <Button>Fake button</Button>
+      <DashboardHeader heading="Scanning" text="Create and manage entity.">
+        <Button>Refresh</Button>
       </DashboardHeader>
       <div>
         <EmptyPlaceholder>
           <EmptyPlaceholder.Icon name="post" />
-          <EmptyPlaceholder.Title>No content created</EmptyPlaceholder.Title>
+          <EmptyPlaceholder.Title>No entity created</EmptyPlaceholder.Title>
           <EmptyPlaceholder.Description>
-            You don&apos;t have any content yet. Start creating content.
+            You don&apos;t have any entity yet. Start scanning document.
           </EmptyPlaceholder.Description>
-          <Button variant="outline">Fake button</Button>
+          <Button variant="outline">Scan</Button>
         </EmptyPlaceholder>
       </div>
     </DashboardShell>
