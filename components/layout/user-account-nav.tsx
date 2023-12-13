@@ -41,7 +41,7 @@ export function UserAccountNav({ user }: UserAccountNavProps) {
         </div>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
-          <Link href="https://api.docu.run" className="flex items-center space-x-2.5">
+          <Link href="https://app.docu.run" className="flex items-center space-x-2.5">
             <LayoutDashboard className="h-4 w-4" />
             <p className="text-sm">Dashboard</p>
           </Link>

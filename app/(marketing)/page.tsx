@@ -65,7 +65,7 @@ export default function IndexPage() {
             className="flex animate-fade-up justify-center space-x-2 opacity-0 md:space-x-4"
             style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
           >
-            <Link href="https://api.docu.run" className={cn(buttonVariants({ size: "lg" }))}>
+            <Link href="https://app.docu.run" className={cn(buttonVariants({ size: "lg" }))}>
               Go Dashboard
             </Link>
             <Link

@@ -15,7 +15,7 @@ export const dashboardConfig: DashboardConfig = {
   sidebarNav: [
     {
       title: "Documents",
-      href: "https://api.docu.run",
+      href: "https://app.docu.run",
       icon: "page",
     },
   ],

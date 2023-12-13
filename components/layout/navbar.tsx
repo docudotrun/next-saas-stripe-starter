@@ -34,7 +34,7 @@ export function NavBar({ items, children, rightElements, scroll = false }: NavBa
             {rightElements}
 
             <Link
-              href="https://api.docu.run"
+              href="https://app.docu.run"
               className={cn(
                 buttonVariants({ variant: "outline", size: "sm" })
               )}
