@@ -7,7 +7,6 @@ import { SiteFooter } from "@/components/layout/site-footer"
 import { Icons } from "@/components/shared/icons"
 import { docsConfig } from "@/config/docs"
 import { siteConfig } from "@/config/site"
-import { getCurrentUser } from "@/lib/session"
 
 interface DocsLayoutProps {
   children: React.ReactNode
@@ -25,11 +24,10 @@ const rightHeader = () => (
 )
 
 export default async function DocsLayout({ children }: DocsLayoutProps) {
-  const user = await getCurrentUser()
 
   return (
     <div className="flex min-h-screen flex-col">
-      <NavBar user={user} items={docsConfig.mainNav} rightElements={rightHeader()}>
+      <NavBar items={docsConfig.mainNav} rightElements={rightHeader()}>
         <DocsSidebarNav items={docsConfig.sidebarNav} />
       </NavBar>
       <div className="container flex-1">{children}</div>
