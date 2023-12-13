@@ -15,28 +15,8 @@ export const dashboardConfig: DashboardConfig = {
   sidebarNav: [
     {
       title: "Documents",
-      href: "/dashboard",
+      href: "https://api.docu.run",
       icon: "page",
-    },
-    {
-      title: "Document types",
-      href: "/dashboard/types",
-      icon: "text",
-    },
-    {
-      title: "Workflows",
-      href: "/dashboard/workflows",
-      icon: "workflow",
-    },
-    {
-      title: "Billing",
-      href: "/dashboard/billing",
-      icon: "billing",
-    },
-    {
-      title: "Settings",
-      href: "/dashboard/settings",
-      icon: "settings",
     },
   ],
 }

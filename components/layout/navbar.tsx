@@ -8,17 +8,16 @@ import { UserAccountNav } from "./user-account-nav";
 import { Button, buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-
+import { env } from "@/env.mjs"
 
 interface NavBarProps {
-  user: Pick<User, "name" | "image" | "email"> | undefined
   items?: MainNavItem[]
   children?: React.ReactNode
   rightElements?: React.ReactNode
   scroll?: boolean
 }
 
-export function NavBar({ user, items, children, rightElements, scroll = false }: NavBarProps) {
+export function NavBar({ items, children, rightElements, scroll = false }: NavBarProps) {
   const scrolled = useScroll(50);
 
   return (
@@ -34,16 +33,14 @@ export function NavBar({ user, items, children, rightElements, scroll = false }:
           <div className="flex items-center space-x-3">
             {rightElements}
 
-            {!user ? (
-              <Link
-                href="/login"
-                className={cn(
-                  buttonVariants({ variant: "outline", size: "sm" })
-                )}
-              >
-                Login
-              </Link>
-            ) : <UserAccountNav user={user} />}
+            <Link
+              href="https://api.docu.run"
+              className={cn(
+                buttonVariants({ variant: "outline", size: "sm" })
+              )}
+            >
+              Dashboard
+            </Link>
           </div>
         </div>
       </header>

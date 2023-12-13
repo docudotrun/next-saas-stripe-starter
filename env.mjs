@@ -11,6 +11,7 @@ export const env = createEnv({
     //GOOGLE_CLIENT_SECRET: z.string().min(1),
     //GITHUB_OAUTH_TOKEN: z.string().min(1),
     DATABASE_URL: z.string().min(1),
+    WEB_API: z.string().min(1),
     RESEND_API_KEY: z.string().min(1),
     STRIPE_API_KEY: z.string().min(1),
     STRIPE_WEBHOOK_SECRET: z.string().min(1),
@@ -29,6 +30,7 @@ export const env = createEnv({
     //GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
     //GITHUB_OAUTH_TOKEN: process.env.GITHUB_OAUTH_TOKEN,
     DATABASE_URL: process.env.DATABASE_URL,
+    WEB_API: process.env.WEB_API,
     RESEND_API_KEY: process.env.RESEND_API_KEY,
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
     // Stripe
